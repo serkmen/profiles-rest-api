@@ -2,7 +2,12 @@
 # Development Server #
 ######################
 1 - Dev Environment preparation : Docker, GiT, VSCode, Chrome ModHeader - Modify HTTP headers Extension
-2 - Git Initialization, add README.md, add gitignore, LICENSE
+2 - Git Initialization, add README.md, add gitignore, LICENSE, configure remote repository, perform initial commit
+3 - Prepare Git Actions and integrate with DockerHub
+4 - Create Dockerfile for backend server, Configure docker-compose with PG DB, create and bind common app volume, create requirements file for dev and production and Python Venv and PG DB base
+5 - Initialize Django Application
+6 - Create new applicaiton <profiles_api>
+7 - Enable profiles_api and other built-in dependicies (rest_framework,rest_framework.authtoken) in settings.py of root project
 ######################
 # Application Code   #
 ######################
