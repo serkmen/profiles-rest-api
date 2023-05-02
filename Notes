@@ -9,10 +9,15 @@
 6 - Create new applicaiton <profiles_api>
 7 - Enable profiles_api and other built-in dependicies (rest_framework,rest_framework.authtoken) in settings.py of root project
 8 - Check linting errors and add .flake8 for ignorance
-
+9 - First push and verify Github actions for basic project structure
 ######################
 # Application Code   #
 ######################
+1- Implement profiles_api application model
+2- Create custom user model
+3- Create custom user model manager
+4- Update settings.py with customer user model AUTH_USER_MODEL = 'profiles_api.UserProfile' to use this model for all authentication and registration work
+5- Implement migrations to match database with models and run.
 ######################
 # Tools              #
 ######################
