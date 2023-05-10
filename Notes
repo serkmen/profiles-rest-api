@@ -20,6 +20,8 @@
 5- Implement migrations to match database with models and run.
 6- Enable Django superuser with django cli to modify models and inspect database
 7- Enable Django Admin for the project in profiles_api admin.py
+8- Create first "Hello World" API view
+9- Wire your API to a URL under our app : Implement global urls.py with include
 ######################
 # Tools              #
 ######################
