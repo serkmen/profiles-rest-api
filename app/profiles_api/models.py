@@ -38,7 +38,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
-    # Required for Django command line tools to manage customer users.
+    # Required for Django command line tools to manage custom users.
     objects = UserProfileManager()
 
     # Overriding default username field for authentication.

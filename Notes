@@ -18,6 +18,8 @@
 3- Create custom user model manager
 4- Update settings.py with customer user model AUTH_USER_MODEL = 'profiles_api.UserProfile' to use this model for all authentication and registration work
 5- Implement migrations to match database with models and run.
+6- Enable Django superuser with django cli to modify models and inspect database
+7- Enable Django Admin for the project in profiles_api admin.py
 ######################
 # Tools              #
 ######################
