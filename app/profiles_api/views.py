@@ -38,4 +38,18 @@ class HelloApiView(APIView):
                 serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
                 )
+    
+    # PK is for primary key for update
+    def put(self, request, pk=None):
+        """Handle updating an object"""
+        return Response({'method': 'PUT'})
 
+    # Partially update
+    def patch(self, request, pk=None):
+        """Handle a partial update of an object"""
+        return Response({'method': 'PATCH'})
+
+    # Delete an object
+    def delete(self, request, pk=None):
+        """Delete an Object"""
+        return Response({'method': 'DELETE'})
