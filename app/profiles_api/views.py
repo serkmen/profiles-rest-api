@@ -1,8 +1,12 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import status
+
+from profiles_api import serializers
 
 class HelloApiView(APIView):
     """Test API View"""
+    serializer_class = serializers.HelloSerializer
 
     def get(self, request, format=None):
         """Returns a list of APIView features"""
@@ -16,4 +20,22 @@ class HelloApiView(APIView):
         # HTTP function must return a reponse
         # Ressponse in the format of JSON in either list or dictionary format
         return Response({'message': 'Hello', 'an_apiview':an_apiview})
+
+    def post(self, request):
+        """Create a hello message with our name"""
+        # Assign request data to serializer class
+        serializer = self.serializer_class(data=request.data)
+
+        # Validate a serializer
+        if serializer.is_valid():
+            name = serializer.validated_data.get('name')
+            # Return a message + f is for adding variable to string
+            message = f'Hello {name}'
+            return Response({'message': message})
+        else:
+            # Default response returns HTTP200
+            return Response(
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+                )
 

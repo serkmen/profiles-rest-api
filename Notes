@@ -22,6 +22,7 @@
 7- Enable Django Admin for the project in profiles_api admin.py
 8- Create first "Hello World" API view
 9- Wire your API to a URL under our app : Implement global urls.py with include
+10- Add Serializer class for POST,PUT and PATCH requests
 ######################
 # Tools              #
 ######################
